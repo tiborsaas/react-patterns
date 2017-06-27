@@ -1,0 +1,12 @@
+* {
+	font-family: Raleway;
+}
+header {
+	background: yellow;
+	padding: 1rem;
+}
+
+main {
+	background: tomato;
+	padding: 1rem;
+}
