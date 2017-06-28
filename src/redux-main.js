@@ -1,10 +1,11 @@
-import { createStore, combineReducers } from 'redux';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 import header from './header/store';
 import index from './index/store';
 
 let mainReducer = combineReducers({
   header,
-  index
+  index,
 });
 
-export default createStore(mainReducer);
+export default createStore(mainReducer, applyMiddleware(thunk));

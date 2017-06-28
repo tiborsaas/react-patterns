@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import Header from './header/component';
-import Index from './index/component';
+import Header from './header/header';
+import Index from './index/index';
 
 export default class App extends Component {
 
