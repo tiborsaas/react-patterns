@@ -8,10 +8,14 @@ export default class Index extends Component {
 		super(props);
 	}
 
+	getValueByKey(key) {
+		return this.props.state.index[key];
+	}
+
 	render() {
 		return (
 			<main>
-				<p>{this.props.state.index.content}</p>
+				<p>{this.getValueByKey('content')}</p>
 			</main>
 		)
 	}
