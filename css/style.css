@@ -10,3 +10,13 @@ main {
 	background: tomato;
 	padding: 1rem;
 }
+
+.hidden {
+	display: none;
+}
+
+article {
+	background: black;
+	color: #fff;
+	padding: 1rem;
+}

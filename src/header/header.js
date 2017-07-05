@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import store from '../redux-main';
 
 export default class Header extends Component {
 
@@ -9,14 +8,14 @@ export default class Header extends Component {
 	}
 
 	standUp() {
-		store.dispatch({ type: 'HEADER:STANDUP' });
+		this.props.dispatch({ type: 'HEADER:STANDUP' });
 	}
 
 	render() {
 		return (
 			<header>
-				<h1>{this.props.state.header.name}</h1>
-				<button onClick={this.standUp}>Stand up</button>
+				<h1>{this.props.name}</h1>
+				<button onClick={this.standUp.bind(this)}>Stand up</button>
 			</header>
 		)
 	}

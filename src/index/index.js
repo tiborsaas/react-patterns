@@ -11,11 +11,20 @@ export default class Index extends Component {
 	}
 
 	getValueByKey(key) {
-		return this.props.state.index[key];
+		// return this.props.state.index[key];
+		return [1,2,3];
 	}
 
-	lowerIt() {
-		store.dispatch({ type: 'INDEX:LOWERCASED' })
+	showHelloDialog() {
+		store.dispatch({ type: 'DIALOG_SHOWN', id: 'hello' })
+	}
+
+	showBelloDialog() {
+		store.dispatch({ type: 'DIALOG_SHOWN', id: 'bello' })
+	}
+
+	logger(e) {
+		console.log('logging', e.target.value)
 	}
 
 	render() {
@@ -24,10 +33,12 @@ export default class Index extends Component {
 				<p>{this.getValueByKey('content')}</p>
 				<ul>{
 					this.getValueByKey('repos').map( (repo, i) => {
-						return <li key={i}>{repo.username}</li>
+						return <li key={i}>{i}</li>
 					})
 				}</ul>
-				<button onClick={this.lowerIt}>Make it lowercase</button>
+				<input type="range" onChange={this.logger.bind(this)} min="0" max="5000" />
+				<button onClick={this.showHelloDialog}>Show hello dialog</button>
+				<button onClick={this.showBelloDialog}>Show bello dialog</button>
 			</main>
 		)
 	}
