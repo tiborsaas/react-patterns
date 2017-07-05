@@ -1,6 +1,6 @@
 import store from '../redux-main';
 
-export default function loadServerData() {
+function loadServerData() {
 	return function (dispatch) {
 		return fetch('http://equal-koala.glitch.me/game/8').then(
 			response => {
@@ -12,6 +12,12 @@ export default function loadServerData() {
 		);
 	};
 }
+
+export function displayDialog(id) {
+	return function () {
+		store.dispatch({ type: 'DIALOG_SHOWN', id: id })
+	}
+} 
 
 export function startFetch() {
 	store.dispatch(
