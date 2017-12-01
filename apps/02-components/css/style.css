@@ -1,0 +1,27 @@
+* {
+	font-family: Raleway;
+}
+
+body {
+	margin: 1rem 6rem;
+}
+
+header {
+	background: yellow;
+	padding: 1rem;
+}
+
+main {
+	background: tomato;
+	padding: 1rem;
+}
+
+.hidden {
+	display: none;
+}
+
+article {
+	background: black;
+	color: #fff;
+	padding: 1rem;
+}

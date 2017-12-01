@@ -2,7 +2,13 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 
-class DialogComp extends Component {
+function mapStateToProps(state) {
+	return { id: state.dialog.displayWithId }
+}
+
+let Dialog = connect(
+	mapStateToProps
+)( class DialogComp extends Component {
 
 	constructor(props) {
 		super(props);
@@ -15,14 +21,6 @@ class DialogComp extends Component {
 			</article>
 		)
 	}
-}
-
-function mapStateToProps(state) {
-	return { id: state.dialog.displayWithId }
-}
-
-let Dialog = connect(
-	mapStateToProps
-)(DialogComp);
+});
 
 export default Dialog;
