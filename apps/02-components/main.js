@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Body from './body';
-//import Footer from './problem';
+// import Footer from './problem';
 
 function render() {
 	const message = 'Components';
@@ -10,7 +10,7 @@ function render() {
 		<div>
 			<h1>{message}</h1>
 			<Body/>
-			{/*<Footer/>*/}
+			{/* <Footer/> */}
 		</div>,
 		document.querySelector('#root')
 	)
